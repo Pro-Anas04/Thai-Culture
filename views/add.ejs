@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เพิ่มประเพณีใหม่</title>
+    <link rel="stylesheet" type="text/css" href="/css/add.css">
+</head>
+<body>
+    <div class="container">
+        <h1>เพิ่มประเพณีใหม่</h1>
+        
+        <form action="/add" method="POST" enctype="multipart/form-data" class="add-form">
+            <div class="form-group">
+                <label for="name">ชื่อประเพณี:</label>
+                <input type="text" id="name" name="name" placeholder="ชื่อ" required>
+            </div>
+            <div class="form-group">
+                <label for="history">ประวัติ:</label>
+                <textarea id="history" name="history" placeholder="ประวัติ" rows="1" required oninput="autoExpand(this)"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="description">รายละเอียด:</label>
+                <textarea id="description" name="description" placeholder="รายละเอียด" rows="1" required oninput="autoExpand(this)"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="region">ประเพณีภาค (เช่น N,C,S,E):</label>
+                <input type="text" id="region" name="region" placeholder="ประเพณีภาค" required>
+            </div>
+            <div class="form-group">
+                <label for="date">วันที่:</label>
+                <input type="text" id="date" name="date" placeholder="ช่วงเวลา" required>
+            </div>
+            <div class="form-group">
+                <label for="image">รูปภาพ:</label>
+                <input type="file" id="image" name="image">
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">เพิ่มข้อมูล</button>
+                <button type="button" onclick="window.location.href='/edit-info'" class="cancel-btn">ยกเลิก</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function autoExpand(field) {
+            field.style.height = 'auto';
+            field.style.height = field.scrollHeight + 'px';
+        }
+
+        // Initialize the textarea height on page load
+        document.querySelectorAll('textarea').forEach(textarea => autoExpand(textarea));
+    </script>
+</body>
+</html>

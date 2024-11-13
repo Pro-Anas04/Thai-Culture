@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* White background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    width: 100%;
+}
+
+.login-wrapper {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555; /* Darker gray text */
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    color: #333; /* Black label text */
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #CCC; /* Light gray border */
+    border-radius: 5px;
+    background-color: #F9F9F9; /* Light gray input background */
+    color: #333; /* Black text in inputs */
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #666; /* Darker gray border on focus */
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #333; /* Dark gray button */
+    border: none;
+    border-radius: 5px;
+    color: #fff; /* White button text */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #555; /* Slightly lighter gray on hover */
+}
+
+@media (max-width: 480px) {
+    .login-wrapper {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}

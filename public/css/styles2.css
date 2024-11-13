@@ -1,0 +1,232 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 3.5em;
+    margin-top: 30px;
+}
+
+/* nav {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+} */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 0 20px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+
+a:hover {
+    color: #4a90e2;
+}
+
+/* ปุ่มเพิ่มเทศกาล */
+.add-button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #45a049;
+}
+
+/* ปุ่มลบ แก้ไข */
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.edit-button, .delete-button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.edit-button {
+    background-color: #ffa500;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #ff8c00;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+/* การตั้งค่ากรอบและภาพ */
+.festival-item {
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    max-height: 1000px;
+    margin-bottom: 10px; /* เพิ่มช่องว่างระหว่างรายการ */
+    transition: transform 0.3s;
+}
+
+.festival-item:hover {
+    transform: scale(1.05);
+}
+
+.festival-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.festival-item p {
+    padding: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* การตั้งค่ากริด */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์สำหรับหน้าจอใหญ่ */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center; /* จัดให้อยู่กลาง */
+}
+
+.festival-item {
+    margin-bottom: 20px; /* เพิ่มช่องว่างระหว่างรายการ */
+}
+
+/* กำหนดให้แสดงเป็น 1 คอลัมน์สำหรับมือถือ */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* แสดงเป็น 1 คอลัมน์ */
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .festival-item {
+        max-width: 100%; /* ปรับขนาดของรายการให้เต็มหน้าจอ */
+    }
+} */
+
+
+/* css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f8fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #00796b;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  header h1 {
+    margin: 2;
+    font-size: 2em;
+  }
+  
+  nav {
+    text-align: center;
+    background-color: #004d40;
+    padding: 1em 0;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffdd57;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .container img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .container h2 {
+    color: #006d77;
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+  }
+  
+  .container p {
+    font-size: 1.1em;
+    line-height: 1.60;
+    color: #555;
+  }
+  
+  p strong {
+    color: #006d77;
+  }
+  

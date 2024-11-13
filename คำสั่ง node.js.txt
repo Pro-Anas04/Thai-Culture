@@ -1,0 +1,4 @@
+npm init -y
+
+
+npm i bcryptjs body-parser cookie-parser ejs express express-fileupload express-session multer mysql2 nodemon

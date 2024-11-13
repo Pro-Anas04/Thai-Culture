@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ประเพณีไทย</h1>
+    </header>
+
+    <div class="container">
+        <div class="login-wrapper">
+            <h2>เข้าสู่ระบบ</h2>
+            <p>ยินดีต้อนรับ</p>
+            <form action="/login" method="POST">
+                <div class="input-group">
+                    <label for="username">บัญชีผู้ใช้:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">รหัสผ่าน:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button class="login-btn" type="submit">เข้าสู่ระบบ</button>
+            </form>
+        </div>
+    </div>
+
+    <% if (error) { %>
+        <script>
+            alert('<%= error %>');
+        </script>
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ประเพณีภาคอีสาน</title>
+  <link rel="stylesheet" href="/css/styles3.css">
+</head>
+<body>
+  <header>
+      <h1>ประเพณีภาคอีสาน</h1>
+      <a href="/edit-info" class="edit-btn">แก้ไขข้อมูล</a>
+      <a href="/logout" class="logout-btn">ออกจากระบบ</a>
+  </header>
+
+  <nav>
+    <a href="/index">หน้าแรก</a>
+    <a href="/index2">ภาคเหนือ</a>
+    <a href="/index3">ภาคกลาง</a>
+    <a href="/index4">ภาคอีสาน</a>
+    <a href="/index5">ภาคใต้</a>
+</nav>
+
+  <div class="container">
+    <% traditions.forEach(tradition => { %>
+          <div class="data-item2">
+              <div class="data-item">
+                  <h3><%= tradition.name %></h3>
+                  <img src="/uploads/<%= tradition.image %>" alt="<%= tradition.name %>" class="thumbnail">
+                  <p class="date"><%= tradition.date %></p>
+                  <p class="summary"><%= tradition.history.substring(0, 100) %>...</p>
+  
+                  <div class="full-content" style="display: none;">
+                      <p class="history">ประวัติ...</p>
+                      <p class="history"><%= tradition.history %></p>
+                      <p class="description">รายละเอียดประเพณี...</p>
+                      <p class="description"><%= tradition.description %></p>
+                  </div>
+  
+                  <button class="toggle-button">อ่านเพิ่มเติม</button>
+                  
+  
+                  <!-- Add Edit and Delete buttons -->
+                  
+              </div>
+          </div>
+      <% }); %>
+  </div>
+  
+
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const buttons = document.querySelectorAll('.toggle-button');
+  
+          buttons.forEach(button => {
+              button.addEventListener('click', function () {
+                  // ค้นหา `.data-item` ที่ปุ่มอยู่ภายใน
+                  const dataItem = button.closest('.data-item'); 
+                  const fullContent = dataItem.querySelector('.full-content');
+                  const summary = dataItem.querySelector('.summary');
+  
+                  // ตรวจสอบสถานะการแสดงผล และเปลี่ยนสถานะ
+                  if (fullContent.style.display === 'none' || fullContent.style.display === '') {
+                      fullContent.style.display = 'block';  // แสดงเนื้อหาเต็ม
+                      summary.style.display = 'none';       // ซ่อนสรุปเนื้อหา
+                      button.textContent = 'อ่านแบบย่อ';     // เปลี่ยนข้อความของปุ่ม
+                  } else {
+                      fullContent.style.display = 'none';   // ซ่อนเนื้อหาเต็ม
+                      summary.style.display = 'block';      // แสดงสรุปเนื้อหา
+                      button.textContent = 'อ่านเพิ่มเติม'; // เปลี่ยนข้อความของปุ่มกลับ
+                  }
+              });
+          });
+      });
+  </script>
+  
+  
+</body>
+</html>
